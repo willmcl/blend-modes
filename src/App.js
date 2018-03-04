@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Selector from './Selector.js';
+import Playground from './Playground.js';
 
 class App extends Component {
     render() {
@@ -10,6 +11,7 @@ class App extends Component {
                     <h1 className="App-title">App title</h1>
                 </header>
                 <Selector />
+                <Playground />
             </div>
         );
     }

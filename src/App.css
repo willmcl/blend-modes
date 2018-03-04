@@ -4,7 +4,8 @@
 }
 
 .App-header,
-.Selector {
+.Selector,
+.Playground {
   border: 1px solid;
   padding: 10px;
   margin-bottom: 10px;
