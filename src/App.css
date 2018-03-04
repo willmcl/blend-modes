@@ -3,7 +3,9 @@
   padding: 20px;
 }
 
-.App-header {
+.App-header,
+.Selector {
   border: 1px solid;
   padding: 10px;
+  margin-bottom: 10px;
 }
