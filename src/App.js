@@ -3,7 +3,7 @@ import './App.css';
 import Selector from './Selector.js';
 import Playground from './Playground.js';
 
-const modes = ['mode1', 'mode2', 'mode3'];
+const modes = [ { 'name': 'mode1' }, { 'name': 'mode2' }, { 'name': 'mode3' } ];
 
 class App extends Component {
     render() {
@@ -13,7 +13,7 @@ class App extends Component {
                     <h1 className="App-title">App title</h1>
                 </header>
                 <Selector modes={modes}/>
-                <Playground />
+                <Playground/>
             </div>
         );
     }
