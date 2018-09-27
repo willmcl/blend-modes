@@ -6,15 +6,25 @@ class DataTable extends Component {
     render() {
         return (
             <div className="DataTable">
-                <p>DataTable</p>
                 <table>
-                    <tr>
-                        <td></td>
-                        <td>Binary Values</td>
-                        <td>RGB Values</td>
-                    </tr>
-                <DataTableBody/>
-                <DataTableFooter/>
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <td colSpan="3">Binary Values</td>
+                            <td colSpan="3">RGB Values</td>
+                        </tr>
+                        <tr>
+                            <td>Channels</td>
+                            <td>R</td>
+                            <td>G</td>
+                            <td>B</td>
+                            <td>R</td>
+                            <td>G</td>
+                            <td>B</td>
+                        </tr>
+                    </thead>
+                <DataTableBody selected={this.props.selected}/>
+                <DataTableFooter selected={this.props.selected}/>
                 </table>
             </div>
         )

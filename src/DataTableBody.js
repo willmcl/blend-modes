@@ -4,10 +4,11 @@ import DataTableBodyRow from './DataTableBodyRow.js';
 class DataTableBody extends Component {
     render() {
         return (
-            <div className="DataTableBody">
-                <p>DataTableBody</p>
-                <DataTableBodyRow/>
-            </div>
+            <tbody className="DataTableBody">
+                 {this.props.selected.map(layer => (
+                     <DataTableBodyRow key={layer.name} name={layer.name} value={layer.value} current={this.props.current}/>
+                 ))}
+            </tbody>
         )
     }
 }

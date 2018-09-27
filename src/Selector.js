@@ -8,7 +8,7 @@ class Selector extends Component {
                 <p>Selector</p>
                 <ul>
                 {this.props.modes.map(mode => (
-                    <li>{mode.name}</li>
+                    <li key={mode.name}>{mode.name}</li>
                 ))}
                 </ul>
             </div>

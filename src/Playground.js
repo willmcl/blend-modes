@@ -7,7 +7,7 @@ class Playground extends Component {
             <div className="Playground">
                 <p>Playground</p>
                 {this.props.colours.map(colour => (
-                    <PlaygroundCircle colour={colour} current={this.props.current}/>
+                    <PlaygroundCircle key={colour.name} colour={colour.value} current={this.props.current}/>
                 ))}
             </div>
         )

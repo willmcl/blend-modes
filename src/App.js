@@ -8,13 +8,31 @@ import Desc from './Desc.js';
 import Data from './Data.js';
 
 const colours = [
-    'rgb(255, 255, 255)',
-    'rgb(0, 0, 0)',
-    'rgb(128, 128, 128)',
-    'rgb(255, 0, 0)',
-    'rgb(0, 0, 255)',
-    'rgb(0, 255, 0)',
-]
+    {
+        'value': 'rgb(255, 255, 255)',
+        'name': 'white',
+    },
+    {
+        'value': 'rgb(0, 0, 0)',
+        'name': 'black',
+    },
+    {
+        'value': 'rgb(128, 128, 128)',
+        'name': 'grey',
+    },
+    {
+        'value': 'rgb(255, 0, 0)',
+        'name': 'red',
+    },
+    {
+        'value': 'rgb(0, 0, 255)',
+        'name': 'blue',
+    },
+    {
+        'value': 'rgb(0, 255, 0)',
+        'name': 'green',
+    },
+];
 
 const modes = [
     {
@@ -67,6 +85,9 @@ const modes = [
 
 let current = modes[0];
 
+// Test out how we might select the colours
+let selected = colours;
+
 class App extends Component {
     render() {
         return (
@@ -76,11 +97,11 @@ class App extends Component {
                 </header>
                 <Selector modes={modes}/>
                 <Playground colours={colours} current={current}/>
-                <div class="App-row">
+                <div className="App-row">
                     <Instructions/>
                     <Basics/>
                     <Desc current={current}/>
-                    <Data current={current}/>
+                    <Data current={current} selected={selected}/>
                 </div>
             </div>
         );
