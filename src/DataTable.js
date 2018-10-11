@@ -24,7 +24,7 @@ class DataTable extends Component {
                         </tr>
                     </thead>
                 <DataTableBody selected={this.props.selected}/>
-                <DataTableFooter selected={this.props.selected}/>
+                <DataTableFooter current={this.props.current} selected={this.props.selected}/>
                 </table>
             </div>
         )
