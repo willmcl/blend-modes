@@ -6,7 +6,6 @@ import Instructions from './Instructions.js';
 import Basics from './Basics.js';
 import Desc from './Desc.js';
 import Data from './Data.js';
-import { draggable } from './helpers';
 
 const colours = [
     {
@@ -88,10 +87,6 @@ let current = modes[0];
 
 // Test out how we might select the colours
 let selected = colours;
-
-document.addEventListener( "DOMContentLoaded", function () {
-    draggable();
-} );
 
 class App extends Component {
     render() {
