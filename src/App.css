@@ -55,16 +55,28 @@ td {
 }
 
 .Playground {
-    display: flex;
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
 }
 
 .PlaygroundCircle {
+    position: absolute;
+    top: 60px;
+    left: 20px;
     width: 100px;
     height: 100px;
-    margin: 10px -20px 10px 0;
     -webkit-border-radius: 50px; -moz-border-radius: 50px; border-radius: 50px;
     border: 1px solid;
+    cursor: pointer;
 }
+
+.PlaygroundCircle:nth-child(3) { left: 100px; }
+.PlaygroundCircle:nth-child(4) { left: 180px; }
+.PlaygroundCircle:nth-child(5) { left: 260px; }
+.PlaygroundCircle:nth-child(6) { left: 340px; }
+.PlaygroundCircle:nth-child(7) { left: 420px; }
+.PlaygroundCircle:nth-child(8) { left: 500px; }
 
 .PlaygroundCircle p {
     text-align: center;
