@@ -83,12 +83,14 @@ const modes = [
     }
 ];
 
-let current = modes[0];
-
 // Test out how we might select the colours
 let selected = colours;
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {current: modes[0]};
+    }
     render() {
         return (
             <div className="App">
@@ -96,12 +98,12 @@ class App extends Component {
                     <h1 className="App-title">App title</h1>
                 </header>
                 <Selector modes={modes}/>
-                <Playground colours={colours} current={current}/>
+                <Playground colours={colours} current={this.state.current}/>
                 <div className="App-row">
                     <Instructions/>
                     <Basics/>
-                    <Desc current={current}/>
-                    <Data current={current} selected={selected}/>
+                    <Desc current={this.state.current}/>
+                    <Data current={this.state.current} selected={selected}/>
                 </div>
             </div>
         );
