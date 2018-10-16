@@ -83,27 +83,47 @@ const modes = [
     }
 ];
 
-// Test out how we might select the colours
-let selected = colours;
-
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {current: modes[0]};
+        this.state = {
+            current: modes[0],
+            selected: colours,
+        };
+
+        this.handleModeChange = this.handleModeChange.bind(this);
     }
+
+    handleModeChange(modeValue) {
+        this.setState({
+            current: modes.find(x => x.name === modeValue),
+        })
+    }
+
     render() {
         return (
             <div className="App">
                 <header className="App-header">
                     <h1 className="App-title">App title</h1>
                 </header>
-                <Selector modes={modes}/>
-                <Playground colours={colours} current={this.state.current}/>
+                <Selector
+                    modes={modes}
+                    onModeChange={this.handleModeChange}
+                />
+                <Playground
+                    colours={colours}
+                    current={this.state.current}
+                />
                 <div className="App-row">
                     <Instructions/>
                     <Basics/>
-                    <Desc current={this.state.current}/>
-                    <Data current={this.state.current} selected={selected}/>
+                    <Desc
+                        current={this.state.current}
+                    />
+                    <Data
+                        current={this.state.current}
+                        selected={this.state.selected}
+                    />
                 </div>
             </div>
         );
