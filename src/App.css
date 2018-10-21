@@ -66,7 +66,7 @@ td {
     left: 20px;
     width: 100px;
     height: 100px;
-    -webkit-border-radius: 50px; -moz-border-radius: 50px; border-radius: 50px;
+    /*-webkit-border-radius: 50px; -moz-border-radius: 50px; border-radius: 50px;*/
     border: 1px solid;
     cursor: pointer;
 }
