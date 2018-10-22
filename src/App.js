@@ -6,6 +6,7 @@ import Instructions from './Instructions.js';
 import Basics from './Basics.js';
 import Desc from './Desc.js';
 import Data from './Data.js';
+import { isOver } from './helpers';
 
 const colours = [
     {
@@ -92,11 +93,31 @@ class App extends Component {
         };
 
         this.handleModeChange = this.handleModeChange.bind(this);
+        this.handleSelectionChange = this.handleSelectionChange.bind(this);
     }
 
     handleModeChange(modeValue) {
         this.setState({
             current: modes.find(x => x.name === modeValue),
+        })
+    }
+
+    handleSelectionChange(e) {
+
+        let allCircles = document.querySelectorAll('.PlaygroundCircle'),
+            selectedColours = [];
+        allCircles.forEach(
+            function(currentValue, currentIndex, listObj) {
+                if ( isOver( listObj[currentIndex], e ) ) {
+                    let bg = listObj[currentIndex].style.backgroundColor;
+                    let colourObject = colours.find( x => x.value === bg );
+                    console.log('over');
+                    selectedColours.push( colourObject );
+                }
+            }
+        );
+        this.setState({
+            selected: selectedColours,
         })
     }
 
@@ -113,6 +134,7 @@ class App extends Component {
                 <Playground
                     colours={colours}
                     current={this.state.current}
+                    onSelectionChange={this.handleSelectionChange}
                 />
                 <div className="App-row">
                     <Instructions/>

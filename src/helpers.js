@@ -22,3 +22,14 @@ export function rgbToBinary( value ) {
 export function binaryToRgb( binArray ) {
     return binArray.map( x => ( x * 255).toFixed( 0 ) );
 }
+
+export function isOver( element, e ) {
+
+    let left = element.getBoundingClientRect().left,
+        top = element.getBoundingClientRect().top,
+        right = left + element.clientWidth,
+        bottom = top + element.clientHeight;
+
+    return ( e.clientX > left && e.clientX < right && e.clientY > top && e.clientY < bottom );
+
+}

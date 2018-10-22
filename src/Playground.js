@@ -2,10 +2,13 @@ import React, { Component } from 'react';
 import PlaygroundCircle from './PlaygroundCircle.js';
 
 class Playground extends Component {
-    
-    draggable() {
 
-        console.log('called');
+    constructor(props) {
+        super(props);
+        this.handleSelectionChange = this.handleSelectionChange.bind(this);
+    }
+
+    draggable() {
 
         let objects = document.querySelectorAll( '.PlaygroundCircle' );
 
@@ -53,13 +56,17 @@ class Playground extends Component {
         });
     }
 
+    handleSelectionChange(e) {
+        this.props.onSelectionChange(e);
+    }
+
     componentDidMount() {
         this.draggable();
     }
 
     render() {
         return (
-            <div className="Playground">
+            <div className="Playground" onClick={this.handleSelectionChange}>
                 <p>Playground</p>
                 {this.props.colours.map(colour => (
                     <PlaygroundCircle key={colour.name} colour={colour.value} current={this.props.current}/>

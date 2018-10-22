@@ -7,7 +7,9 @@ class Data extends Component {
             <div className="Data">
                 <p>Data</p>
                 <p>{this.props.current.displayName}: {this.props.current.displayFormula}</p>
+
                 <DataTable current={this.props.current} selected={this.props.selected}/>
+
             </div>
         )
     }
