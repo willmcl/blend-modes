@@ -25,11 +25,21 @@ export function binaryToRgb( binArray ) {
 
 export function isOver( element, e ) {
 
-    let left = element.getBoundingClientRect().left,
-        top = element.getBoundingClientRect().top,
-        right = left + element.clientWidth,
-        bottom = top + element.clientHeight;
+    // Detect if a click is within the circular swatch
+    // -----------------------------------------------
+    // To test if a point is within a circle, you want to determine if the distance
+    // between the given point and the center of the circle is smaller than the radius of the circle.
+    // -----------------------------------------------
+    // SRC: https://stackoverflow.com/questions/16792841/detect-if-user-clicks-inside-a-circle#16792888
 
-    return ( e.clientX > left && e.clientX < right && e.clientY > top && e.clientY < bottom );
 
+    let radius = element.clientWidth / 2,
+        elBounds = element.getBoundingClientRect(),
+        center = {
+            'x': elBounds.left + radius,
+            'y': elBounds.top + radius
+        },
+        distanceClickToCenter = Math.sqrt( ( e.clientX - center.x ) * ( e.clientX - center.x ) + ( e.clientY - center.y ) * ( e.clientY - center.y ) );
+
+    return ( distanceClickToCenter < radius );
 }
