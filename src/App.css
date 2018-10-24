@@ -27,7 +27,6 @@ td {
 .App-header,
 .Selector,
 .Playground,
-.Instructions,
 .Basics,
 .Desc,
 .Data {
@@ -60,7 +59,7 @@ td {
     overflow: hidden;
 }
 
-.PlaygroundCircle {
+.PlaygroundSwatch {
     position: absolute;
     top: 60px;
     left: 20px;
@@ -71,14 +70,14 @@ td {
     cursor: pointer;
 }
 
-.PlaygroundCircle:nth-child(3) { left: 100px; }
-.PlaygroundCircle:nth-child(4) { left: 180px; }
-.PlaygroundCircle:nth-child(5) { left: 260px; }
-.PlaygroundCircle:nth-child(6) { left: 340px; }
-.PlaygroundCircle:nth-child(7) { left: 420px; }
-.PlaygroundCircle:nth-child(8) { left: 500px; }
+.PlaygroundSwatch:nth-child(3) { left: 100px; }
+.PlaygroundSwatch:nth-child(4) { left: 180px; }
+.PlaygroundSwatch:nth-child(5) { left: 260px; }
+.PlaygroundSwatch:nth-child(6) { left: 340px; }
+.PlaygroundSwatch:nth-child(7) { left: 420px; }
+.PlaygroundSwatch:nth-child(8) { left: 500px; }
 
-.PlaygroundCircle p {
+.PlaygroundSwatch p {
     text-align: center;
     font-size: 8px;
     line-height: 1;

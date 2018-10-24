@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PlaygroundCircle from './PlaygroundCircle.js';
+import PlaygroundSwatch from './PlaygroundSwatch.js';
 
 class Playground extends Component {
 
@@ -10,7 +10,7 @@ class Playground extends Component {
 
     draggable() {
 
-        let objects = document.querySelectorAll( '.PlaygroundCircle' );
+        let objects = document.querySelectorAll( '.PlaygroundSwatch' );
 
         let selected = null, // Object of the element to be moved
             x_pos = 0, y_pos = 0, // Stores x & y coordinates of the mouse pointer
@@ -69,7 +69,7 @@ class Playground extends Component {
             <div className="Playground" onClick={this.handleSelectionChange}>
                 <p>Playground</p>
                 {this.props.colours.map(colour => (
-                    <PlaygroundCircle key={colour.name} colour={colour.value} current={this.props.current}/>
+                    <PlaygroundSwatch key={colour.name} colour={colour.value} current={this.props.current}/>
                 ))}
             </div>
         )

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import Selector from './Selector.js';
 import Playground from './Playground.js';
-import Instructions from './Instructions.js';
 import Basics from './Basics.js';
 import Desc from './Desc.js';
 import Data from './Data.js';
@@ -12,26 +11,32 @@ const colours = [
     {
         'value': 'rgb(255, 255, 255)',
         'name': 'white',
+        'zIndex': 0,
     },
     {
         'value': 'rgb(0, 0, 0)',
         'name': 'black',
+        'zIndex': 0,
     },
     {
         'value': 'rgb(128, 128, 128)',
         'name': 'grey',
+        'zIndex': 0,
     },
     {
         'value': 'rgb(255, 0, 0)',
         'name': 'red',
+        'zIndex': 0,
     },
     {
         'value': 'rgb(0, 0, 255)',
         'name': 'blue',
+        'zIndex': 0,
     },
     {
         'value': 'rgb(0, 255, 0)',
         'name': 'green',
+        'zIndex': 0,
     },
 ];
 
@@ -89,7 +94,7 @@ class App extends Component {
         super(props);
         this.state = {
             current: modes[0],
-            selected: colours,
+            selected: [],
         };
 
         this.handleModeChange = this.handleModeChange.bind(this);
@@ -104,18 +109,28 @@ class App extends Component {
 
     handleSelectionChange(e) {
 
-        let allCircles = document.querySelectorAll('.PlaygroundCircle'),
+        let allCircles = document.querySelectorAll('.PlaygroundSwatch'),
             selectedColours = [];
         allCircles.forEach(
             function(currentValue, currentIndex, listObj) {
                 if ( isOver( listObj[currentIndex], e ) ) {
-                    let bg = listObj[currentIndex].style.backgroundColor;
+                    let bg = listObj[currentIndex].style.backgroundColor,
+                        zIndex = listObj[currentIndex].style.zIndex;
                     let colourObject = colours.find( x => x.value === bg );
-                    console.log('over');
+                    colourObject.zIndex = zIndex;
                     selectedColours.push( colourObject );
                 }
             }
         );
+
+        // Sort the selectedColours by z-index
+        function Comparator( a, b ) {
+            if ( a.zIndex < b.zIndex ) return -1;
+            if ( a.zIndex > b.zIndex ) return 1;
+            return 0;
+        }
+        selectedColours = selectedColours.sort( Comparator );
+
         this.setState({
             selected: selectedColours,
         })
@@ -137,7 +152,6 @@ class App extends Component {
                     onSelectionChange={this.handleSelectionChange}
                 />
                 <div className="App-row">
-                    <Instructions/>
                     <Basics/>
                     <Desc
                         current={this.state.current}

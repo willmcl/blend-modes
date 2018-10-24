@@ -6,6 +6,7 @@ class DataTable extends Component {
     render() {
         return (
             <div className="DataTable">
+                <p>{this.props.current.displayName}: {this.props.current.displayFormula}</p>
                 <table>
                     <thead>
                         <tr>
