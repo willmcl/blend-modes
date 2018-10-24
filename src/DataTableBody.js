@@ -6,7 +6,7 @@ class DataTableBody extends Component {
         return (
             <tbody className="DataTableBody">
                  {this.props.selected.map(selected => (
-                     <DataTableBodyRow key={selected.name} name={selected.name} value={selected.value} current={this.props.current}/>
+                     <DataTableBodyRow key={selected.name} colour={selected} current={this.props.current}/>
                  ))}
             </tbody>
         )

@@ -27,7 +27,7 @@ class DataTableFooter extends Component {
         return (
             <tfoot className="DataTableFooter">
                 <tr>
-                    <td>Result</td>
+                    <td colSpan="2">Result</td>
                     <td>{result[0][0]}</td>
                     <td>{result[0][1]}</td>
                     <td>{result[0][2]}</td>

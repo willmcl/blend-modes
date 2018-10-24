@@ -10,12 +10,13 @@ class DataTable extends Component {
                 <table>
                     <thead>
                         <tr>
-                            <td></td>
+                            <td colSpan="2"></td>
                             <td colSpan="3">Binary Values</td>
                             <td colSpan="3">RGB Values</td>
                         </tr>
                         <tr>
-                            <td>Channels</td>
+                            <td>Name</td>
+                            <td>Z-index</td>
                             <td>R</td>
                             <td>G</td>
                             <td>B</td>
