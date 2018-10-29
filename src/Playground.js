@@ -67,7 +67,6 @@ class Playground extends Component {
     render() {
         return (
             <div className="Playground" onClick={this.handleSelectionChange}>
-                <p>Playground</p>
                 {this.props.colours.map(colour => (
                     <PlaygroundSwatch key={colour.name} colour={colour.value} current={this.props.current}/>
                 ))}

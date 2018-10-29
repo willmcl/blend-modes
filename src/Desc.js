@@ -4,7 +4,7 @@ class Desc extends Component {
     render() {
         return (
             <div className="Desc">
-                <p>Desc</p>
+                <h3>{this.props.current.displayName}</h3>
                 <p>{this.props.current.description}</p>
             </div>
         )

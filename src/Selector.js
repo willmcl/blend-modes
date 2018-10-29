@@ -2,26 +2,27 @@ import React, { Component } from 'react';
 
 class Selector extends Component {
 
-    constructor(props) {
-        super(props);
-        this.handleModeChange = this.handleModeChange.bind(this);
+    constructor( props ) {
+        super( props );
+        this.handleModeChange = this.handleModeChange.bind( this );
     }
 
-    handleModeChange(e) {
-        this.props.onModeChange(e.target.value);
+    handleModeChange( e ) {
+        this.props.onModeChange( e.target.value );
     }
 
     render() {
         return (
             <div className="Selector">
-                <p>Selector</p>
                 <form>
-                {this.props.modes.map(mode => (
-                    <div key={mode.name}>
-                        <input type="radio" name="modeSelector" value={mode.name} onChange={this.handleModeChange} />
-                        <label htmlFor={mode.name}>{mode.name}</label>
-                    </div>
-                ))}
+                    <ul>
+                        {this.props.modes.map( mode => (
+                            <li key={mode.name}>
+                                <input type="radio" name="modeSelector" value={mode.name} onChange={this.handleModeChange}/>
+                                <label htmlFor={mode.name}>{mode.name}</label>
+                            </li>
+                        ) )}
+                    </ul>
                 </form>
             </div>
         );

@@ -16,7 +16,7 @@ class DataTable extends Component {
                         </tr>
                         <tr>
                             <td>Name</td>
-                            <td>Z-index</td>
+                            <td>Z</td>
                             <td>R</td>
                             <td>G</td>
                             <td>B</td>

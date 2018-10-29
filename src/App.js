@@ -38,6 +38,21 @@ const colours = [
         'name': 'green',
         'zIndex': 0,
     },
+    {
+        'value': 'rgb(255, 255, 0)',
+        'name': 'yellow',
+        'zIndex': 0,
+    },
+    {
+        'value': 'rgb(255, 0, 255)',
+        'name': 'purple',
+        'zIndex': 0,
+    },
+    {
+        'value': 'rgb(255, 128, 0)',
+        'name': 'orange',
+        'zIndex': 0,
+    },
 ];
 
 const modes = [
@@ -140,7 +155,8 @@ class App extends Component {
         return (
             <div className="App">
                 <header className="App-header">
-                    <h1 className="App-title">App title</h1>
+                    <h1 className="App-title">Blend modes explained</h1>
+                    <p>A project by <a href="http://willmclean.net" target="_blank" rel="noopener noreferrer">Will McLean</a></p>
                 </header>
                 <Selector
                     modes={modes}

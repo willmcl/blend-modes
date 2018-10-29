@@ -16,7 +16,7 @@ class Data extends Component {
 
         return (
             <div className="Data">
-                <p>Data</p>
+                <h3>Data</h3>
                 {data}
             </div>
         )
