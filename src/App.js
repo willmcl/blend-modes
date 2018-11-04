@@ -30,6 +30,11 @@ const colours = [
         'zIndex': 0,
     },
     {
+        'value': 'rgb(128, 0, 255)',
+        'name': 'purple',
+        'zIndex': 0,
+    },
+    {
         'value': 'rgb(0, 0, 255)',
         'name': 'blue',
         'zIndex': 0,
@@ -42,11 +47,6 @@ const colours = [
     {
         'value': 'rgb(255, 255, 0)',
         'name': 'yellow',
-        'zIndex': 0,
-    },
-    {
-        'value': 'rgb(255, 0, 255)',
-        'name': 'purple',
         'zIndex': 0,
     },
     {
