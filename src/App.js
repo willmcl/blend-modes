@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import IssueReportingInfo from './IssueReportingInfo.js';
 import Selector from './Selector.js';
 import Playground from './Playground.js';
 import Basics from './Basics.js';
@@ -81,8 +82,8 @@ const modes = [
     {
         'name': 'difference',
         'displayName': 'Difference',
-        'description': 'Difference is expressed by f(a, b) = | a - b | \n\nThis is the difference between the two values. \n\n' +
-        'This mode is great as it results in some great colour combos.',
+        'description': 'Difference is expressed by f(a, b) = | a - b | \n\nThis is the difference between the two values and if calculated by the absolute value of the base layer minus the top layer. \n\n' +
+        'This mode is great as it results in some vibrant and unexpected colour combos.',
         'formula': function ( a, b ) {
             return Math.abs( a - b );
         },
@@ -91,7 +92,7 @@ const modes = [
     {
         'name': 'overlay',
         'displayName': 'Overlay',
-        'description': 'If a &lt; 0.5 then overlay is expressed by f(a, b) = 2ab otherwise it is expressed as 1 - 2(1 - a)(1 - b) \n\n' +
+        'description': 'If a < 0.5 then overlay is expressed by f(a, b) = 2ab otherwise it is expressed as 1 - 2(1 - a)(1 - b) \n\n' +
         'Overlay combines multiply and screen modes. If the base layer is light an extreme version of screen mode is used, if the base layer is dark an extreme version of multiply is used.',
         'formula': function ( a, b ) {
             if ( a <= 0.5 ) {
@@ -157,6 +158,7 @@ class App extends Component {
                 <header className="App-header">
                     <h1 className="App-title">Blend modes explained</h1>
                     <p>A project by <a href="http://willmclean.net" target="_blank" rel="noopener noreferrer">Will McLean</a></p>
+                    <IssueReportingInfo />
                 </header>
                 <Selector
                     modes={modes}

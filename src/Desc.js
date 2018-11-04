@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import IssueReportingInfo from './IssueReportingInfo.js';
 
 class Desc extends Component {
     render() {
@@ -6,6 +7,7 @@ class Desc extends Component {
             <div className="Desc">
                 <h3>{this.props.current.displayName}</h3>
                 <p>{this.props.current.description}</p>
+                <IssueReportingInfo />
             </div>
         )
     }
