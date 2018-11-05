@@ -82,7 +82,7 @@ const modes = [
     {
         'name': 'difference',
         'displayName': 'Difference',
-        'description': 'Difference is expressed by f(a, b) = | a - b | \n\nThis is the difference between the two values and if calculated by the absolute value of the base layer minus the top layer. \n\n' +
+        'description': 'Difference is expressed by f(a, b) = | a - b | \n\nThis is the difference between the two values and is calculated by the absolute value of the base layer minus the top layer. \n\n' +
         'This mode is great as it results in some vibrant and unexpected colour combos.',
         'formula': function ( a, b ) {
             return Math.abs( a - b );
