@@ -9,7 +9,7 @@ class Playground extends Component {
     }
 
     draggable() {
-
+        // SRC: https://jsfiddle.net/tovic/Xcb8d/
         let objects = document.querySelectorAll( '.PlaygroundSwatch' );
 
         let selected = null, // Object of the element to be moved

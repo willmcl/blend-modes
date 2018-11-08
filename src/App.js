@@ -114,6 +114,17 @@ const modes = [
         },
         'displayFormula': 'f(a, b) = min(a, b)',
     },
+    {
+        'name': 'lighten',
+        'displayName': 'Lighten',
+        'description': 'Lighten is expressed by f(a, b) = max(a, b) \n\n' +
+        'Selects the lighter value for each of the channels for the base and top layer.' +
+        'This mode is symmetric. Changing the order of the layers does not effect the result.',
+        'formula': function ( a, b ) {
+            return Math.max(a, b);
+        },
+        'displayFormula': 'f(a, b) = max(a, b)',
+    },
 ];
 
 class App extends Component {
