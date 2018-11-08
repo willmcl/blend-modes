@@ -77,12 +77,11 @@ p, label, td {
     width: 100%;
     border-bottom: 0.5px dotted;
     padding: 10px;
-}
-.Playground {
     position: relative;
     height: 50vh;
     min-height: 260px;
     overflow: hidden;
+    isolation: isolate;
 }
 
 .PlaygroundSwatch {
