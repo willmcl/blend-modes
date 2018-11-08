@@ -102,7 +102,18 @@ const modes = [
             }
         },
         'displayFormula': 'f(a, b) = if( a <= 0.5 ) { 2ab } else { 1 - 2(1 - a)(1 - b) }',
-    }
+    },
+    {
+        'name': 'darken',
+        'displayName': 'Darken',
+        'description': 'Darken is expressed by f(a, b) = min(a, b) \n\n' +
+        'Selects the darker value for each of the channels for the base and top layer.' +
+        'This mode is symmetric. Changing the order of the layers does not effect the result.',
+        'formula': function ( a, b ) {
+            return Math.min(a, b);
+        },
+        'displayFormula': 'f(a, b) = min(a, b)',
+    },
 ];
 
 class App extends Component {
