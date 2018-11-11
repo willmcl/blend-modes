@@ -125,6 +125,22 @@ const modes = [
         },
         'displayFormula': 'f(a, b) = max(a, b)',
     },
+    {
+        'name': 'color-dodge',
+        'displayName': 'Color dodge',
+        'description': 'If a = 0 then color-dodge is expressed by f(a, b) = 0 and if a = 1 then color-dodge is expressed by f(a, b) = 1 otherwise it is expressed as f(a, b) = min(1, a / (1 - b)) \n\n' +
+        'This lightens the bottom layer depending on the value of the top layer: the brighter the top layer, the more its color affects the bottom layer. Blending any color with white gives white. Blending with black does not change the image.',
+        'formula': function ( a, b ) {
+            if ( a == 0 ) {
+                return 0;
+            } else if( a == 1 ) {
+                return 1;
+            } else {
+                return Math.min( 1, a / (1 - b) );
+            }
+        },
+        'displayFormula': 'f(a, b) = if( a = 0 ){ 0 } else if( a = 1 ){ 1 } else { min(1, a / (1 - b)) }',
+    },
 ];
 
 class App extends Component {

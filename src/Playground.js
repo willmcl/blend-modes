@@ -49,7 +49,6 @@ class Playground extends Component {
                 _drag_init( this );
                 return false;
             };
-
             document.onmousemove = _move_elem;
             document.onmouseup = _destroy;
 

@@ -88,20 +88,20 @@ p, label, td {
     position: absolute;
     top: 10px;
     left: 10px;
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%;
     cursor: pointer;
 }
 .PlaygroundSwatch:first-child { border: 0.5px dotted; }
-.PlaygroundSwatch:nth-child(2) { left: 80px; }
-.PlaygroundSwatch:nth-child(3) { left: 150px; }
-.PlaygroundSwatch:nth-child(4) { left: 220px; }
-.PlaygroundSwatch:nth-child(5) { left: 10px; top: 80px; }
-.PlaygroundSwatch:nth-child(6) { left: 80px; top: 80px; }
-.PlaygroundSwatch:nth-child(7) { left: 150px; top: 80px; }
-.PlaygroundSwatch:nth-child(8) { left: 220px; top: 80px; }
-.PlaygroundSwatch:nth-child(9) { left: 10px; top: 150px; }
+.PlaygroundSwatch:nth-child(2) { left: 70px; }
+.PlaygroundSwatch:nth-child(3) { left: 130px; }
+.PlaygroundSwatch:nth-child(4) { left: 190px; }
+.PlaygroundSwatch:nth-child(5) { left: 10px; top: 120px; }
+.PlaygroundSwatch:nth-child(6) { left: 70px; top: 120px; }
+.PlaygroundSwatch:nth-child(7) { left: 130px; top: 120px; }
+.PlaygroundSwatch:nth-child(8) { left: 190px; top: 120px; }
+.PlaygroundSwatch:nth-child(9) { display: none; }
 
 @media (min-width: 750px) {
     .PlaygroundSwatch {
@@ -115,7 +115,7 @@ p, label, td {
     .PlaygroundSwatch:nth-child(6) { left: 130px; top: 130px; }
     .PlaygroundSwatch:nth-child(7) { left: 250px; top: 130px; }
     .PlaygroundSwatch:nth-child(8) { left: 380px; top: 130px; }
-    .PlaygroundSwatch:nth-child(9) { left: 10px; top: 250px; }
+    .PlaygroundSwatch:nth-child(9) { display: block; left: 10px; top: 250px; }
 }
 
 /* Information */
