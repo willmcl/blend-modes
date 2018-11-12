@@ -6,7 +6,9 @@ class Desc extends Component {
         return (
             <div className="Desc">
                 <h3>{this.props.current.displayName}</h3>
-                <p>{this.props.current.description}</p>
+                {this.props.current.description.map(paragraph => (
+                    <p>{paragraph}</p>
+                ))}
                 <IssueReportingInfo />
             </div>
         )
