@@ -175,6 +175,22 @@ const modes = [
         },
         'displayFormula': 'f(a, b) = if( a = 1 ){ 1 } else if( b = 0 ){ 0 } else { 1 - min( 1, (1 - a) / b ) }',
     },
+    {
+        'name': 'hard-light',
+        'displayName': 'Hard light',
+        'description': [ 'If b <= 0.5 then overlay is expressed by f(a, b) = 2ab otherwise it is expressed as f(a, b) = 1 - (1 - a) * (1 - (2 * b - 1))',
+            'Overlay combines multiply and screen modes. If the top layer is light an extreme version of screen mode is used, if the top layer is dark an extreme version of multiply is used.',
+        ],
+        'formula': function ( a, b ) {
+            if ( b <= 0.5 ) {
+                return 2 * a * b;
+            } else {
+                return 1 - (1 - a) * (1 - (2 * b - 1));
+            }
+        },
+        'displayFormula': 'f(a, b) = if( b <= 0.5 ) { 2ab } else { 1 - (1 - a) * (1 - (2 * b - 1)) }',
+    },
+
 ];
 
 class App extends Component {
