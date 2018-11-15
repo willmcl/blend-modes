@@ -5,7 +5,7 @@ export function rgbToChannels( value ) {
     string = string.replace( ')', '' );
     let channels = string.split( ', ' );
 
-    return [ channels[ 0 ], channels[ 1 ], channels[ 2 ] ];
+    return [ Number(channels[ 0 ]), Number(channels[ 1 ]), Number(channels[ 2 ]) ];
 }
 
 export function rgbToBinary( value ) {
@@ -16,7 +16,7 @@ export function rgbToBinary( value ) {
         gBin = (channels[ 1 ] / 255).toFixed( 2 ),
         bBin = (channels[ 2 ] / 255).toFixed( 2 );
 
-    return [ rBin, gBin, bBin ];
+    return [ Number(rBin), Number(gBin), Number(bBin) ];
 }
 
 export function binaryToRgb( binArray ) {

@@ -143,8 +143,6 @@ const modes = [
             'This lightens the bottom layer depending on the value of the top layer: the brighter the top layer, the more its color affects the bottom layer. Blending any color with white gives white. Blending with black does not change the image.',
         ],
         'formula': function ( a, b ) {
-            a = Number( a );
-            b = Number( b );
             if ( a === 0 ) {
                 return 0;
             } else if ( b === 1 ) {
@@ -163,8 +161,6 @@ const modes = [
             'This divides the inverted base layer by the top layer, and then inverts the result. This darkens the top layer increasing the contrast to reflect the color of the base layer. The darker the base layer, the more its color is used. Blending with white produces no difference.'
         ],
         'formula': function ( a, b ) {
-            a = Number( a );
-            b = Number( b );
             if ( a === 1 ) {
                 return 1;
             } else if ( b === 0 ) {
@@ -189,6 +185,19 @@ const modes = [
             }
         },
         'displayFormula': 'f(a, b) = if( b <= 0.5 ) { 2ab } else { 1 - (1 - a) * (1 - (2 * b - 1)) }',
+    },
+    {
+        'name': 'exclusion',
+        'displayName': 'Exclusion',
+        'description': [
+            'Exclusion is expressed by f(a, b) = a + b - 2ab',
+            'Exclusion produces an effect similar to that of the Difference mode but lower in contrast.',
+            'This mode is great as it results in some vibrant and unexpected colour combos.',
+        ],
+        'formula': function ( a, b ) {
+            return a + b - 2 * a * b;
+        },
+        'displayFormula': 'f(a, b) = a + b - 2ab',
     },
 
 ];
