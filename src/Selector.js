@@ -15,14 +15,11 @@ class Selector extends Component {
         return (
             <div className="Selector">
                 <form>
-                    <ul>
+                    <select onChange={this.handleModeChange}>
                         {this.props.modes.map( mode => (
-                            <li key={mode.name}>
-                                <input type="radio" name="modeSelector" value={mode.name} onChange={this.handleModeChange}/>
-                                <label htmlFor={mode.name}>{mode.name}</label>
-                            </li>
+                            <option key={mode.name} value={mode.name}>{mode.name}</option>
                         ) )}
-                    </ul>
+                    </select>
                 </form>
             </div>
         );
