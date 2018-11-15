@@ -255,7 +255,7 @@ class App extends Component {
             <div className="App">
                 <header className="App-header">
                     <h1 className="App-title">Blend modes explained</h1>
-                    <p>A project by <a href="http://willmclean.net" target="_blank" rel="noopener noreferrer">Will
+                    <p>An ongoing project by <a href="http://willmclean.net" target="_blank" rel="noopener noreferrer">Will
                         McLean</a></p>
                     <IssueReportingInfo/>
                 </header>

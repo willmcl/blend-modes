@@ -21,13 +21,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p, label, td {
+    font-weight: lighter;
     font-family: monospace;
 }
 
 * { box-sizing: border-box; }
 
 .App {
-    color: blue;
+    color: black;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -37,9 +38,8 @@ p, label, td {
 
 .App-header {
     width: 100%;
-    padding: 10px;
-    border-bottom: 0.5px dotted;
-    background-color: lightyellow;
+    padding: 15px;
+    background-color: yellow;
 }
 .App-header > :first-child { margin-top: 0; }
 .App-header > :last-child { margin-bottom: 0; }
@@ -49,33 +49,18 @@ p, label, td {
 
 .Selector {
     width: 100%;
-    border-bottom: 0.5px dotted;
-    padding: 10px;
-    background-color: lightyellow;
+    padding: 15px;
+    background-color: chartreuse;
 }
 .Selector > :first-child { margin-top: 0; }
 .Selector > :last-child { margin-bottom: 0; }
-
-.Selector ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.Selector li {
-    display: inline-block;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-right: 10px;
-    cursor: pointer;
-}
+.Selector label { margin-right: 10px; }
 
 /* Playground */
 
 .Playground {
     flex-grow: 2;
     width: 100%;
-    border-bottom: 0.5px dotted;
     padding: 10px;
     position: relative;
     height: 50vh;
@@ -83,6 +68,8 @@ p, label, td {
     overflow: hidden;
     isolation: isolate;
 }
+
+@media (min-width: 750px) { .Playground { min-height: 400px; } }
 
 .PlaygroundSwatch {
     position: absolute;
@@ -124,13 +111,17 @@ p, label, td {
     width: 100%;
     overflow-x: scroll;
     display: flex;
-    background-color: lightyellow;
+    background-color: white;
 }
+
+.Basics { background-color: hotpink; }
+.Desc { background-color: aqua; }
+.Data { background-color: orange; }
 
 .Basics,
 .Desc,
 .Data {
-    padding: 10px;
+    padding: 15px 15px 25px 15px;
     flex: 1 0 80%;
 }
 
@@ -143,11 +134,6 @@ p, label, td {
 .Desc > :last-child { margin-bottom: 0; }
 .Data > :first-child { margin-top: 0; }
 .Data > :last-child { margin-bottom: 0; }
-
-.Basics,
-.Desc {
-    border-right: 0.5px dotted;
-}
 
 .Desc p {
     white-space: pre-line;
