@@ -12,9 +12,9 @@ export function rgbToBinary( value ) {
     let string = value.replace( 'rgb(', '' );
     string = string.replace( ')', '' );
     let channels = string.split( ', ' ),
-        rBin = (channels[ 0 ] / 255).toFixed( 2 ),
-        gBin = (channels[ 1 ] / 255).toFixed( 2 ),
-        bBin = (channels[ 2 ] / 255).toFixed( 2 );
+        rBin = (channels[ 0 ] / 255).toFixed( 3 ),
+        gBin = (channels[ 1 ] / 255).toFixed( 3 ),
+        bBin = (channels[ 2 ] / 255).toFixed( 3 );
 
     return [ Number(rBin), Number(gBin), Number(bBin) ];
 }
