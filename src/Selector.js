@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import IssueReportingInfo from './IssueReportingInfo.js';
 
 class Selector extends Component {
 
@@ -14,6 +15,9 @@ class Selector extends Component {
     render() {
         return (
             <div className="Selector">
+                <p>A project by <a href="http://willmclean.net" target="_blank" rel="noopener noreferrer">Will
+                    McLean</a></p>
+                <IssueReportingInfo/>
                 <form>
                     <label htmlFor="modeSelector">Blend mode:</label>
                     <select id="modeSelector" onChange={this.handleModeChange}>

@@ -44,10 +44,16 @@ p, label, td {
 .App-header {
     width: 100%;
     padding: 15px;
-    background-color: yellow;
+    background-color: chartreuse;
 }
 .App-header > :first-child { margin-top: 0; }
 .App-header > :last-child { margin-bottom: 0; }
+
+.App-title {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1;
+}
 
 
 /* Selector */
@@ -55,7 +61,7 @@ p, label, td {
 .Selector {
     width: 100%;
     padding: 15px;
-    background-color: chartreuse;
+    background-color: yellow;
 }
 .Selector > :first-child { margin-top: 0; }
 .Selector > :last-child { margin-bottom: 0; }

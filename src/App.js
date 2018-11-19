@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import IssueReportingInfo from './IssueReportingInfo.js';
 import Selector from './Selector.js';
 import Playground from './Playground.js';
 import Basics from './Basics.js';
@@ -254,10 +253,7 @@ class App extends Component {
         return (
             <div className="App">
                 <header className="App-header">
-                    <h1 className="App-title">Blend modes explained</h1>
-                    <p>An ongoing project by <a href="http://willmclean.net" target="_blank" rel="noopener noreferrer">Will
-                        McLean</a></p>
-                    <IssueReportingInfo/>
+                    <h1 className="App-title"><span>B</span><span>l</span><span>e</span><span>n</span><span>d</span><span>&nbsp;</span><span>m</span><span>o</span><span>d</span><span>e</span><span>s</span><span>&nbsp;</span><span>e</span><span>x</span><span>p</span><span>l</span><span>a</span><span>i</span><span>n</span><span>e</span><span>d</span></h1>
                 </header>
                 <Selector
                     modes={modes}
