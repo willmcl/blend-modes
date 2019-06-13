@@ -37,7 +37,6 @@ const GlobalStyle = createGlobalStyle`
   p,
   ol, ul, li,
   code, kbd, pre, samp {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
     line-height: 1.5;
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -62,7 +61,11 @@ const GlobalStyle = createGlobalStyle`
       ${props => props.theme.typeStyles( 20 )}; 
     }
   }
-  h2 { ${props => props.theme.typeStyles( 1 )}; }
+  h2 { 
+    ${props => props.theme.typeStyles( 4 )}; 
+    border-top: 2px solid;
+    padding-top: 1rem;
+  }
   h3 { ${props => props.theme.typeStyles( 1 )}; }
   h4 { ${props => props.theme.typeStyles( 1 )}; }
   h5 { ${props => props.theme.typeStyles( 1 )}; }
@@ -75,7 +78,10 @@ const GlobalStyle = createGlobalStyle`
       margin-bottom: 0;
   }
 
-  small {  ${props => props.theme.typeStyles( -1 )} }
+  small, p.small {  
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+    ${props => props.theme.typeStyles( -2 )} 
+  }
   
   code, kbd, pre, samp {
       font-family: monospace;
@@ -122,9 +128,10 @@ const GlobalStyle = createGlobalStyle`
   sub { top: 0.4em; }
   
   label {
-      ${props => props.theme.typeStyles( -1 )};
+      ${props => props.theme.typeStyles( 0 )};
       line-height: 1.2;
       font-weight: normal;
+      margin-right: 1rem;
   }
   
   .text-input,

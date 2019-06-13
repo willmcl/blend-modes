@@ -8,6 +8,7 @@ import Data from './Data.js';
 import { isOver } from './helpers';
 import GlobalStyles from './GlobalStyles';
 import { ThemeProvider } from 'styled-components';
+import styled from 'styled-components';
 import { theme } from './utils/styling';
 import Header from './Header';
 
@@ -205,6 +206,16 @@ const modes = [
 
 ];
 
+const FirstRow = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 2rem;
+  grid-column-gap: 4rem;
+  @media(${props => props.theme.breakpoints.md}){
+    grid-template-columns: 1fr 1fr;
+  }
+`;
+
 class App extends Component {
   constructor( props ) {
     super( props );
@@ -259,20 +270,27 @@ class App extends Component {
         <div className="App">
           <GlobalStyles/>
           <Header/>
-          <Selector
-            modes={modes}
-            onModeChange={this.handleModeChange}
-          />
+          <FirstRow>
+            <Basics/>
+            <div>
+              <h2>Specifics</h2>
+              <Selector
+                modes={modes}
+                onModeChange={this.handleModeChange}
+              />
+              <Desc
+                current={this.state.current}
+              />
+            </div>
+          </FirstRow>
+
           <Playground
             colours={colours}
             current={this.state.current}
             onSelectionChange={this.handleSelectionChange}
           />
           <div className="App-row">
-            <Basics/>
-            <Desc
-              current={this.state.current}
-            />
+
             <Data
               current={this.state.current}
               selected={this.state.selected}

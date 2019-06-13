@@ -1,14 +1,3 @@
-/* Selector */
-
-.Selector {
-    width: 100%;
-    padding: 15px;
-    background-color: yellow;
-}
-.Selector > :first-child { margin-top: 0; }
-.Selector > :last-child { margin-bottom: 0; }
-.Selector label { margin-right: 10px; }
-
 /* Playground */
 
 .Playground {
@@ -56,40 +45,6 @@
     .PlaygroundSwatch:nth-child(7) { left: 250px; top: 130px; }
     .PlaygroundSwatch:nth-child(8) { left: 380px; top: 130px; }
     .PlaygroundSwatch:nth-child(9) { display: block; left: 10px; top: 250px; }
-}
-
-/* Information */
-
-.App-row {
-    width: 100%;
-    overflow-x: scroll;
-    display: flex;
-    background-color: white;
-}
-
-.Basics { background-color: hotpink; }
-.Desc { background-color: aqua; }
-.Data { background-color: orange; }
-
-.Basics,
-.Desc,
-.Data {
-    padding: 15px 15px 25px 15px;
-    flex: 1 0 80%;
-}
-
-@media (min-width: 450px) { .Basics, .Desc, .Data { flex: 1 0 45%; } }
-@media (min-width: 750px) { .Basics, .Desc, .Data { flex: 1 0 33%; } }
-
-.Basics > :first-child { margin-top: 0; }
-.Basics > :last-child { margin-bottom: 0; }
-.Desc > :first-child { margin-top: 0; }
-.Desc > :last-child { margin-bottom: 0; }
-.Data > :first-child { margin-top: 0; }
-.Data > :last-child { margin-bottom: 0; }
-
-.Desc p {
-    white-space: pre-line;
 }
 
 table {

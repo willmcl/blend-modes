@@ -16,7 +16,6 @@ const Holder = styled.header`
       grid-template-columns: 1fr 1fr;
     }
     p {
-      ${props => props.theme.typeStyles( -2 )};
       margin: 0;
       &:last-child {
         @media(${props => props.theme.breakpoints.md}) {
@@ -67,9 +66,9 @@ class Header extends Component {
           <img src={professor} alt="professor"/>
         </div>
         <div className="info">
-          <p>A project by <a href="http://willmclean.net" target="_blank" rel="noopener noreferrer">Will
+          <p className="small">A project by <a href="http://willmclean.net" target="_blank" rel="noopener noreferrer">Will
             McLean</a></p>
-          <p>Please report requests, issues or errors in the github <a href="https://github.com/willmcl/blend-modes/issues" target="_blank" rel="noopener noreferrer">issue list.</a></p>
+          <p className="small">Please report requests, issues or errors in the github <a href="https://github.com/willmcl/blend-modes/issues" target="_blank" rel="noopener noreferrer">issue list.</a></p>
         </div>
       </Holder>
     )
