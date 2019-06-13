@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import professor from './assets/professor.png';
 
 const Holder = styled.header`
   display: flex;
@@ -25,12 +26,34 @@ const Holder = styled.header`
     }
     
   }
-  h1 {
-    margin-top: 0;
+  
+  .heading {
+    display: flex;
+    align-items: flex-end;
     @media(${props => props.theme.breakpoints.md}) {
-      margin-bottom: 0;
       order: 2;
-      grid-template-columns: 1fr 1fr;
+    }
+    h1 {
+      margin-top: 0;
+      @media(${props => props.theme.breakpoints.md}) {
+        margin-bottom: 0;
+      }
+    }
+    img {
+      width: auto;
+      height: 6rem;
+      margin-bottom: 2rem;
+      @media(${props => props.theme.breakpoints.sm}) {
+        margin-bottom: 3rem;
+      }
+      @media(${props => props.theme.breakpoints.md}) {
+        height: 8rem;
+        margin-bottom: 1rem;
+      }
+      @media(${props => props.theme.breakpoints.lg}) {
+        height: 12rem;
+        margin-bottom: 2rem;
+      }
     }
   }
 `;
@@ -39,7 +62,10 @@ class Header extends Component {
   render() {
     return (
       <Holder>
-        <h1>Blend modes explained</h1>
+        <div className="heading">
+          <h1>Blend modes explained</h1>
+          <img src={professor} alt="professor"/>
+        </div>
         <div className="info">
           <p>A project by <a href="http://willmclean.net" target="_blank" rel="noopener noreferrer">Will
             McLean</a></p>
