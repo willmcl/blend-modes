@@ -37,9 +37,10 @@ const GlobalStyle = createGlobalStyle`
   p,
   ol, ul, li,
   code, kbd, pre, samp {
-      line-height: 1.5;
-      margin-top: 2rem;
-      margin-bottom: 2rem;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+    line-height: 1.5;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -49,7 +50,18 @@ const GlobalStyle = createGlobalStyle`
       a:hover { text-decoration: none; }
   }
 
-  h1 { ${props => props.theme.typeStyles( 20 )}; }
+  h1 { 
+    ${props => props.theme.typeStyles( 10 )};
+    @media ( ${props => props.theme.breakpoints.sm} ) {
+      ${props => props.theme.typeStyles( 14 )}; 
+    }
+    @media ( ${props => props.theme.breakpoints.md} ) {
+      ${props => props.theme.typeStyles( 16 )}; 
+    }
+    @media ( ${props => props.theme.breakpoints.lg} ) {
+      ${props => props.theme.typeStyles( 20 )}; 
+    }
+  }
   h2 { ${props => props.theme.typeStyles( 1 )}; }
   h3 { ${props => props.theme.typeStyles( 1 )}; }
   h4 { ${props => props.theme.typeStyles( 1 )}; }

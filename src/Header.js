@@ -8,6 +8,7 @@ const Holder = styled.header`
   .info {
     display: grid;
     grid-template-columns: 1fr;
+    grid-row-gap: 1rem;
     grid-column-gap: 2rem;
     @media(${props => props.theme.breakpoints.md}) {
       order: 1;
@@ -17,14 +18,17 @@ const Holder = styled.header`
       ${props => props.theme.typeStyles( -2 )};
       margin: 0;
       &:last-child {
-        text-align: right;
+        @media(${props => props.theme.breakpoints.md}) {
+          text-align: right;
+        }
       }
     }
     
   }
   h1 {
-    margin: 0;
+    margin-top: 0;
     @media(${props => props.theme.breakpoints.md}) {
+      margin-bottom: 0;
       order: 2;
       grid-template-columns: 1fr 1fr;
     }
