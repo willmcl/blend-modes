@@ -211,6 +211,7 @@ const FirstRow = styled.div`
   grid-template-columns: 1fr;
   grid-row-gap: 2rem;
   grid-column-gap: 4rem;
+  margin-bottom: 10rem;
   @media(${props => props.theme.breakpoints.md}){
     grid-template-columns: 1fr 1fr;
   }
