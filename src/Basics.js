@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import IconBasics from './atoms/IconBasics';
+import Heading from './molecules/Heading';
 
 class Basics extends Component {
   render() {
     return (
       <div className="Basics">
-        <IconBasics/>
-        <h2>Basics</h2>
+        <Heading text="Basics"><IconBasics/></Heading>
         <p>The Normal blend mode can be represented by: <em>f(a, b) = b</em> where a is the base layer and b is the top
           layer.</p>
         <p>So every pixel where the two layers overlap will be the value of the top layer (b).</p>

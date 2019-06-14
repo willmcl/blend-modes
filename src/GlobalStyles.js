@@ -44,13 +44,13 @@ const GlobalStyle = createGlobalStyle`
 
   h1, h2, h3, h4, h5, h6 {
       font-weight: normal;
-      text-transform: uppercase;
     letter-spacing: 1px;
       a { text-decoration: none; }
       a:hover { text-decoration: none; }
   }
 
   h1 { 
+      text-transform: uppercase;
     ${props => props.theme.typeStyles( 10 )};
     @media ( ${props => props.theme.breakpoints.sm} ) {
       ${props => props.theme.typeStyles( 14 )}; 
@@ -63,9 +63,9 @@ const GlobalStyle = createGlobalStyle`
     }
   }
   h2 { 
-    ${props => props.theme.typeStyles( 4 )}; 
-    border-top: 2px solid;
-    padding-top: 1rem;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+    ${props => props.theme.typeStyles( -1 )};
+    text-align: right;
   }
   h3 { ${props => props.theme.typeStyles( 1 )}; }
   h4 { ${props => props.theme.typeStyles( 1 )}; }

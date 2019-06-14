@@ -11,6 +11,8 @@ import { ThemeProvider } from 'styled-components';
 import styled from 'styled-components';
 import { theme } from './utils/styling';
 import Header from './Header';
+import IconSpecifics from './atoms/IconSpecifics';
+import Heading from './molecules/Heading';
 
 const colours = [
   {
@@ -274,7 +276,7 @@ class App extends Component {
           <FirstRow>
             <Basics/>
             <div>
-              <h2>Specifics</h2>
+              <Heading text="Specifics"><IconSpecifics/></Heading>
               <Selector
                 modes={modes}
                 onModeChange={this.handleModeChange}
