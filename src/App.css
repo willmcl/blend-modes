@@ -1,62 +1,20 @@
-/* Playground */
-
-.Playground {
-    flex-grow: 2;
-    width: 100%;
-    padding: 10px;
-    position: relative;
-    height: 50vh;
-    min-height: 260px;
-    overflow: hidden;
-    isolation: isolate;
-}
-
-@media (min-width: 750px) { .Playground { min-height: 400px; } }
-
-.PlaygroundSwatch {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 100px;
-    height: 100px;
-    -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%;
-    cursor: pointer;
-}
-.PlaygroundSwatch:first-child { border: 0.5px dotted; }
-.PlaygroundSwatch:nth-child(2) { left: 70px; }
-.PlaygroundSwatch:nth-child(3) { left: 130px; }
-.PlaygroundSwatch:nth-child(4) { left: 190px; }
-.PlaygroundSwatch:nth-child(5) { left: 10px; top: 120px; }
-.PlaygroundSwatch:nth-child(6) { left: 70px; top: 120px; }
-.PlaygroundSwatch:nth-child(7) { left: 130px; top: 120px; }
-.PlaygroundSwatch:nth-child(8) { left: 190px; top: 120px; }
-.PlaygroundSwatch:nth-child(9) { display: none; }
-
-@media (min-width: 750px) {
-    .PlaygroundSwatch {
-        width: 150px;
-        height: 150px;
-    }
-    .PlaygroundSwatch:nth-child(2) { left: 130px; }
-    .PlaygroundSwatch:nth-child(3) { left: 250px; }
-    .PlaygroundSwatch:nth-child(4) { left: 380px; }
-    .PlaygroundSwatch:nth-child(5) { left: 10px; top: 130px; }
-    .PlaygroundSwatch:nth-child(6) { left: 130px; top: 130px; }
-    .PlaygroundSwatch:nth-child(7) { left: 250px; top: 130px; }
-    .PlaygroundSwatch:nth-child(8) { left: 380px; top: 130px; }
-    .PlaygroundSwatch:nth-child(9) { display: block; left: 10px; top: 250px; }
-}
 
 table {
-    font-size: 7px;
-    border-collapse: collapse;
-    border: 1px solid;
-    table-layout: fixed;
+  font-size: 7px;
+  border-collapse: collapse;
+  border: 1px solid;
+  table-layout: fixed;
 }
-@media (min-width: 750px) { table { font-size: 12px; } }
+
+@media (min-width: 750px) {
+  table { font-size: 12px; }
+}
 
 td {
-    border: 1px solid;
-    padding: 5px;
+  border: 1px solid;
+  padding: 5px;
 }
-@media (min-width: 750px) { td { padding: 5px 10px; } }
+
+@media (min-width: 750px) {
+  td { padding: 5px 10px; }
+}

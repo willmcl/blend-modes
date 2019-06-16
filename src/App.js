@@ -219,6 +219,17 @@ const FirstRow = styled.div`
   }
 `;
 
+const SecondRow = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 2rem;
+  grid-column-gap: 4rem;
+  margin-bottom: 10rem;
+  @media(${props => props.theme.breakpoints.lg}){
+    grid-template-columns: 1fr 1fr;
+  }
+`;
+
 class App extends Component {
   constructor( props ) {
     super( props );
@@ -287,18 +298,17 @@ class App extends Component {
             </div>
           </FirstRow>
 
-          <Playground
-            colours={colours}
-            current={this.state.current}
-            onSelectionChange={this.handleSelectionChange}
-          />
-          <div className="App-row">
-
+          <SecondRow>
+            <Playground
+              colours={colours}
+              current={this.state.current}
+              onSelectionChange={this.handleSelectionChange}
+            />
             <Data
               current={this.state.current}
               selected={this.state.selected}
             />
-          </div>
+          </SecondRow>
         </div>
       </ThemeProvider>
     );
