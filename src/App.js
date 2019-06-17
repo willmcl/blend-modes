@@ -208,6 +208,11 @@ const modes = [
 
 ];
 
+
+const Holder = styled.div`
+  max-width: 1400px;
+`;
+
 const FirstRow = styled.div`
   display: grid;
   grid-template-columns: 1fr;
@@ -282,7 +287,7 @@ class App extends Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
-        <div className="App">
+        <Holder>
           <GlobalStyles/>
           <Header/>
           <FirstRow>
@@ -311,7 +316,7 @@ class App extends Component {
             />
           </SecondRow>
           <Footer/>
-        </div>
+        </Holder>
       </ThemeProvider>
     );
   }
