@@ -33,6 +33,7 @@ const Holder = styled.header`
       order: 2;
     }
     h1 {
+      pointer-events: none;
       margin-top: 0;
       @media(${props => props.theme.breakpoints.md}) {
         margin-bottom: 0;
