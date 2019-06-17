@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import DataTable from './DataTable.js';
-import DataInstructions from './DataInstructions.js';
 import Heading from './molecules/Heading';
-import IconSpecifics from './atoms/IconSpecifics';
+import IconData from './atoms/IconData';
 
 class Data extends Component {
     render() {
@@ -18,7 +17,7 @@ class Data extends Component {
 
         return (
             <div className="Data">
-                <Heading text="Playground data"><IconSpecifics/></Heading>
+                <Heading text="Playground data"><IconData/></Heading>
                 {data}
             </div>
         )

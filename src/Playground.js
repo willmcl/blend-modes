@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PlaygroundSwatch from './PlaygroundSwatch.js';
 import Heading from './molecules/Heading';
-import IconSpecifics from './atoms/IconSpecifics';
+import IconPlayground from './atoms/IconPlayground';
 import styled from 'styled-components';
 import DataInstructions from './DataInstructions';
 
@@ -91,7 +91,7 @@ class Playground extends Component {
   render() {
     return (
       <div>
-        <Heading text="Playground"><IconSpecifics/></Heading>
+        <Heading text="Playground"><IconPlayground/></Heading>
         <DataInstructions/>
         <Outer>
           <Inner onClick={this.handleSelectionChange}>

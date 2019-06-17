@@ -15,9 +15,6 @@ const animate = keyframes`
   50% {
     transform: translateX(125%);
   }
-  51% {
-    transform: translateX(125%);
-  }
   100% {
     transform: translateX(0);
   }
