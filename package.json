@@ -2,7 +2,7 @@
   "name": "blend-modes",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://blendmodes.info",
+  "homepage": "https://musing-ritchie-d04670.netlify.com",
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

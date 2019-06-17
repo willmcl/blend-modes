@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import IssueReportingInfo from './IssueReportingInfo.js';
 
 class Selector extends Component {
 

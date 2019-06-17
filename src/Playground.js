@@ -92,7 +92,6 @@ class Playground extends Component {
     return (
       <div>
         <Heading text="Playground"><IconPlayground/></Heading>
-        <DataInstructions/>
         <Outer>
           <Inner onClick={this.handleSelectionChange}>
             {this.props.colours.map( colour => (
@@ -100,6 +99,7 @@ class Playground extends Component {
             ) )}
           </Inner>
         </Outer>
+        <DataInstructions/>
       </div>
     )
   }
