@@ -216,6 +216,20 @@ const GlobalStyle = createGlobalStyle`
   .errorMsg {
       color: ${props => props.theme.colours.error};
   }
+  
+  table {
+    ${props => props.theme.typeStyles( -1 )};
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  td, th {
+    text-align: left;
+    font-weight: normal;
+    padding: 5px 10px;
+  }
 `;
 
 export default GlobalStyle;

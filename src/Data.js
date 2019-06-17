@@ -13,7 +13,7 @@ class Data extends Component {
         if ( selected.length > 1 ) {
             data = <DataTable current={this.props.current} selected={this.props.selected}/>;
         } else {
-            data = <DataInstructions />;
+            data = <><p>Select an overlapping shape within the playground to see data.</p></>;
         }
 
         return (

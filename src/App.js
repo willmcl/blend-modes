@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import Selector from './Selector.js';
 import Playground from './Playground.js';
 import Basics from './Basics.js';
@@ -13,6 +12,7 @@ import { theme } from './utils/styling';
 import Header from './Header';
 import IconSpecifics from './atoms/IconSpecifics';
 import Heading from './molecules/Heading';
+import Footer from './Footer';
 
 const colours = [
   {
@@ -213,9 +213,10 @@ const FirstRow = styled.div`
   grid-template-columns: 1fr;
   grid-row-gap: 2rem;
   grid-column-gap: 4rem;
-  margin-bottom: 10rem;
+  margin-bottom: 2rem;
   @media(${props => props.theme.breakpoints.md}){
     grid-template-columns: 1fr 1fr;
+    margin-bottom: 10rem;
   }
 `;
 
@@ -309,6 +310,7 @@ class App extends Component {
               selected={this.state.selected}
             />
           </SecondRow>
+          <Footer/>
         </div>
       </ThemeProvider>
     );

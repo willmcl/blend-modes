@@ -2,17 +2,22 @@ import React, { Component } from 'react';
 import PlaygroundSwatch from './PlaygroundSwatch.js';
 import Heading from './molecules/Heading';
 import IconSpecifics from './atoms/IconSpecifics';
-import styled from'styled-components';
+import styled from 'styled-components';
+import DataInstructions from './DataInstructions';
 
-const Holder = styled.div`
+const Outer = styled.div`
+  background-color: white;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+`;
+
+const Inner = styled.div`
   width: 100%;
   padding: 10px;
   position: relative;
   height: 260px;
   overflow: hidden;
   isolation: isolate;
-  background-color: white;
-  border-radius: 1rem;
   @media(${props => props.theme.breakpoints.md}) {
     height: 400px;
   }
@@ -87,11 +92,14 @@ class Playground extends Component {
     return (
       <div>
         <Heading text="Playground"><IconSpecifics/></Heading>
-        <Holder onClick={this.handleSelectionChange}>
-          {this.props.colours.map( colour => (
-            <PlaygroundSwatch key={colour.name} colour={colour.value} current={this.props.current}/>
-          ) )}
-        </Holder>
+        <DataInstructions/>
+        <Outer>
+          <Inner onClick={this.handleSelectionChange}>
+            {this.props.colours.map( colour => (
+              <PlaygroundSwatch key={colour.name} colour={colour.value} current={this.props.current}/>
+            ) )}
+          </Inner>
+        </Outer>
       </div>
     )
   }
